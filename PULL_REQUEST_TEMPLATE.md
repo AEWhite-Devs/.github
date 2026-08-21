@@ -4,9 +4,13 @@
 
 <!-- Explica qué cambia y por qué es necesario. -->
 
-## Issue relacionado
+## Trazabilidad
 
-Closes #
+- [ ] Issue relacionado: `Closes #<número>`
+- [ ] PR autosuficiente de mantenimiento pequeño y bajo riesgo.
+- [ ] PR automatizada de dependencias o mantenimiento.
+
+Issue o justificación para no crear uno:
 
 ## Tipo y área
 
@@ -19,7 +23,7 @@ Closes #
 
 ## Criterios de aceptación
 
-- [ ] Los criterios del Issue están satisfechos.
+- [ ] Los criterios del Issue o de esta PR están satisfechos.
 
 ## Evidencia de pruebas
 

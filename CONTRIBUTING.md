@@ -10,7 +10,7 @@ Repository-specific instructions may override or extend these guidelines when ne
 
 All development work should follow the standard repository workflow:
 
-1. Create or identify the relevant issue.
+1. Determine whether the change requires an Issue or can use a self-contained PR.
 2. Create a branch for the work.
 3. Implement and test the changes.
 4. Push the branch to GitHub.
@@ -23,7 +23,14 @@ Direct changes to protected branches are not permitted unless explicitly authori
 
 ## Issues
 
-Development work should normally be associated with a GitHub Issue.
+An Issue is required for new behavior, bugs that need investigation, security or
+data changes, breaking changes, coordinated work, incidents, significant debt,
+or anything that needs planning in the organization Project.
+
+A separate Issue may be omitted for a small, low-risk, localized maintenance
+change. In that case, the Pull Request is the unit of work and must explain the
+problem, scope, validation, risk, and rollback. If the work grows, create an
+Issue before continuing.
 
 Issues should include enough information for another contributor to understand:
 
@@ -36,11 +43,12 @@ Issues should include enough information for another contributor to understand:
 
 Use the appropriate Issue Type:
 
-* `Epic`
 * `Feature`
 * `Task`
 * `Bug`
-* `Security`
+
+Use a parent Issue with sub-issues for an epic. Use the `security` label with a
+Bug or Task for security work until an additional organization type is approved.
 
 When available, also complete the relevant organizational fields such as:
 
@@ -61,6 +69,7 @@ Recommended naming format:
 
 ```text
 <type>/<issue-number>-<short-description>
+<type>/<short-description>
 ```
 
 Examples:
@@ -71,6 +80,7 @@ fix/283-payment-validation
 task/314-update-api-documentation
 security/412-token-validation
 refactor/517-provider-service
+docs/fix-broken-links
 ```
 
 Common branch prefixes:
@@ -198,7 +208,8 @@ Every Pull Request should:
 * Have a clear title.
 * Explain what changed.
 * Explain why the change was necessary.
-* Reference the relevant issue.
+* Reference the relevant Issue when required, or justify why the PR is
+  self-contained.
 * Describe how the change was tested.
 * Identify important risks or limitations.
 * Include screenshots or recordings for visual changes when appropriate.
