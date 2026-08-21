@@ -1,0 +1,35 @@
+name: Registrar deuda técnica
+description: Registra un problema de mantenibilidad, diseño o fiabilidad.
+title: "[Tech Debt]: "
+labels: [technical-debt]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema actual
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidencia e impacto
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Resultado deseado
+    validations:
+      required: true
+  - type: textarea
+    id: risk
+    attributes:
+      label: Riesgo de posponerlo
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Criterios de aceptación
+    validations:
+      required: true

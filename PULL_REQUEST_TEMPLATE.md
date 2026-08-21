@@ -1,235 +1,90 @@
 # Pull Request
 
-## Summary
+## Resumen y motivo
 
-Describe what this Pull Request changes and why the change is necessary.
+<!-- Explica qué cambia y por qué es necesario. -->
 
-## Related Issue
+## Issue relacionado
 
-Link the related issue.
+Closes #
 
-Example:
+## Tipo y área
 
-```text
-Closes #123
-```
+- Tipo: feature / fix / refactor / docs / test / infrastructure / security / other
+- Área: Backend / Frontend / Mobile / Infrastructure / QA / Product / Security
 
-If there is no related issue, explain why.
+## Cambios principales
 
-## Type of Change
+-
 
-Select the option that best describes this PR:
+## Criterios de aceptación
 
-* [ ] Feature
-* [ ] Bug fix
-* [ ] Refactor
-* [ ] Documentation
-* [ ] Testing
-* [ ] Infrastructure
-* [ ] Security
-* [ ] Performance
-* [ ] Dependency update
-* [ ] Other
+- [ ] Los criterios del Issue están satisfechos.
 
-## Area
+## Evidencia de pruebas
 
-Select the primary affected area:
+- [ ] Unit tests
+- [ ] Integration tests
+- [ ] API/contract tests
+- [ ] End-to-end tests
+- [ ] Regression test
+- [ ] Smoke tests
+- [ ] Verificación manual
+- [ ] No aplica; explicación incluida
 
-* [ ] Backend
-* [ ] Frontend
-* [ ] Mobile
-* [ ] Infrastructure
-* [ ] QA
-* [ ] Product
-* [ ] Security
-
-## Changes
-
-Describe the main changes introduced by this PR.
-
-*
-*
-*
-
-## Testing
-
-Describe how the changes were tested.
-
-* [ ] Unit tests
-* [ ] Integration tests
-* [ ] API tests
-* [ ] End-to-end tests
-* [ ] Manual testing
-* [ ] Regression testing
-* [ ] Not applicable
-
-Testing details:
+Comandos, entorno y resultados:
 
 ```text
-Describe commands, environments, devices, scenarios, or other relevant information.
+
 ```
 
-## Screenshots / Recordings
+## Evidencia visual
 
-For UI or visual changes, include screenshots or recordings when applicable.
+<!-- Capturas o grabaciones para cambios de UI; N/A si no aplica. -->
 
-If not applicable:
+## Seguridad y privacidad
 
-```text
-N/A
-```
+- [ ] No cambia una frontera de seguridad.
+- [ ] Cambia autenticación, autorización, pagos, datos, uploads, secretos,
+      infraestructura, permisos o integraciones; análisis incluido debajo.
 
-## Breaking Changes
+Riesgos y mitigaciones:
 
-Does this PR introduce a breaking change?
+## API, datos y migraciones
 
-* [ ] No
-* [ ] Yes
+- [ ] No cambia contratos ni base de datos.
+- [ ] OpenAPI fue actualizado.
+- [ ] La migración es compatible y fue probada.
+- [ ] Se documentaron backfill, despliegue gradual y rollback.
 
-If yes, explain:
+## Configuración y dependencias
 
-* What breaks.
-* Who or what is affected.
-* Required migration steps.
-* Deployment considerations.
-* Rollback considerations.
+Documenta variables, secretos, permisos, servicios o dependencias nuevas sin
+incluir valores sensibles.
 
-## Database Changes
+## Despliegue, observabilidad y rollback
 
-Does this PR include database changes or migrations?
+- Pasos especiales:
+- Métricas/logs/alertas:
+- Smoke tests posteriores:
+- Rollback:
 
-* [ ] No
-* [ ] Yes
+## Documentación
 
-If yes, describe:
+- [ ] No requiere cambios.
+- [ ] Documentación y ejemplos fueron actualizados.
+- [ ] Se añadió o actualizó una ADR.
 
-* Migration behavior.
-* Compatibility with existing data.
-* Rollback strategy.
-* Expected execution impact.
+## Notas para revisores
 
-## Configuration Changes
+<!-- Señala lógica compleja, riesgos y archivos prioritarios. -->
 
-Does this PR require changes to:
+## Checklist final
 
-* [ ] Environment variables
-* [ ] Secrets
-* [ ] DNS
-* [ ] Infrastructure
-* [ ] CI/CD
-* [ ] External services
-* [ ] Permissions
-* [ ] None
-
-If applicable, explain the required changes without including credentials or secrets.
-
-## Security Impact
-
-Does this PR affect security-sensitive functionality?
-
-Examples include:
-
-* Authentication
-
-* Authorization
-
-* Payments
-
-* User data
-
-* Business data
-
-* File uploads
-
-* Secrets
-
-* Infrastructure
-
-* Permissions
-
-* External integrations
-
-* [ ] No
-
-* [ ] Yes
-
-If yes, describe the security implications and mitigations.
-
-## Dependencies
-
-Does this PR add, remove, or significantly update dependencies?
-
-* [ ] No
-* [ ] Yes
-
-If yes, explain why the dependency is necessary and any relevant maintenance, security, or licensing considerations.
-
-## Documentation
-
-* [ ] Documentation is not required.
-* [ ] Existing documentation remains accurate.
-* [ ] Documentation has been updated.
-* [ ] Documentation will be handled in a separate issue.
-
-## Deployment Notes
-
-Describe anything the deployment process needs to know.
-
-Examples:
-
-* Required migration order.
-* New environment variables.
-* Service restart requirements.
-* Cache invalidation.
-* Feature flags.
-* Deployment dependencies.
-
-If none:
-
-```text
-No special deployment requirements.
-```
-
-## Rollback
-
-Describe how this change can be safely rolled back if necessary.
-
-If a rollback plan is not required, explain why.
-
-## Reviewer Notes
-
-Mention anything reviewers should pay particular attention to.
-
-Examples:
-
-* Complex logic.
-* Security-sensitive code.
-* Performance implications.
-* Temporary implementation decisions.
-* Known limitations.
-
-## Checklist
-
-Before requesting review:
-
-* [ ] I have reviewed my own changes.
-* [ ] The implementation satisfies the related requirements.
-* [ ] The PR is focused and does not contain unrelated changes.
-* [ ] Relevant tests have been added or updated.
-* [ ] Existing tests pass.
-* [ ] No credentials, secrets, or sensitive information have been committed.
-* [ ] Error handling has been considered.
-* [ ] Security implications have been considered.
-* [ ] Documentation has been updated where necessary.
-* [ ] Breaking changes are clearly documented.
-* [ ] Database migrations have been reviewed where applicable.
-* [ ] The code follows the repository's contribution guidelines.
-* [ ] I understand and take responsibility for all submitted code, including AI-assisted code.
-
-## Final Notes
-
-Add any additional context that may help reviewers understand the change.
-
----
-
-By submitting this Pull Request, the contributor confirms that the changes have been reviewed and are ready for evaluation according to AEWhite Devs contribution and security policies.
+- [ ] Revisé todo mi diff.
+- [ ] La PR es enfocada y no contiene cambios ajenos.
+- [ ] Formatter, linter, análisis estático, tests y build pasan.
+- [ ] No incluí secretos, credenciales ni datos sensibles.
+- [ ] Consideré errores, compatibilidad y rendimiento.
+- [ ] Entiendo y asumo responsabilidad por todo el código, incluido el asistido por IA.
+- [ ] La PR cumple el Manual de Ingeniería de AEWhite Devs.

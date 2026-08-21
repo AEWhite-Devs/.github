@@ -1,11 +1,8 @@
 blank_issues_enabled: false
-
 contact_links:
-
-* name: Security Vulnerability
-  url: mailto:security@aewhitedevs.com
-  about: Report security vulnerabilities privately. Do not create a public issue.
-
-* name: General Contact
-  url: mailto:contact@aewhitedevs.com
-  about: Contact AEWhite Devs for general questions that are not bug reports or feature requests.
+  - name: Vulnerabilidad de seguridad
+    url: mailto:security@aewhitedevs.com
+    about: Reporta vulnerabilidades en privado. No abras un Issue público.
+  - name: Contacto general
+    url: mailto:contact@aewhitedevs.com
+    about: Consultas que no sean bugs, funcionalidades o tareas.
