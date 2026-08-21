@@ -1,159 +1,97 @@
-name: Bug Report
-description: Report a reproducible problem or unexpected behavior.
+name: Reportar un bug
+description: Reporta un problema reproducible o comportamiento inesperado.
 title: "[Bug]: "
 labels: []
 type: Bug
-
 body:
-
-* type: markdown
-  attributes:
-  value: |
-  Thank you for reporting a bug.
-
-  ```
-  Please provide enough information for the issue to be reproduced and investigated efficiently.
-
-  Security vulnerabilities must **not** be reported here. Please follow the instructions in `SECURITY.md`.
-  ```
-
-* type: textarea
-  id: summary
-  attributes:
-  label: Bug Summary
-  description: Provide a clear and concise description of the problem.
-  placeholder: Describe what is wrong.
-  validations:
-  required: true
-
-* type: textarea
-  id: expected
-  attributes:
-  label: Expected Behavior
-  description: Describe what you expected to happen.
-  placeholder: What should have happened?
-  validations:
-  required: true
-
-* type: textarea
-  id: actual
-  attributes:
-  label: Actual Behavior
-  description: Describe what actually happened.
-  placeholder: What happened instead?
-  validations:
-  required: true
-
-* type: textarea
-  id: reproduction
-  attributes:
-  label: Steps to Reproduce
-  description: Provide the minimum steps necessary to reproduce the issue.
-  placeholder: |
-  1. Go to...
-  2. Select...
-  3. Enter...
-  4. Observe...
-  validations:
-  required: true
-
-* type: textarea
-  id: reproducibility
-  attributes:
-  label: Reproducibility
-  description: Indicate how consistently the problem occurs.
-  placeholder: |
-  Example:
-  - Always
-  - Frequently
-  - Intermittently
-  - Only once
-  validations:
-  required: true
-
-* type: dropdown
-  id: area
-  attributes:
-  label: Affected Area
-  description: Select the primary area affected by the issue.
-  options:
-  - Backend
-  - Frontend
-  - Mobile
-  - Infrastructure
-  - QA
-  - Product
-  - Security
-  - Unknown
-  validations:
-  required: true
-
-* type: textarea
-  id: environment
-  attributes:
-  label: Environment
-  description: Provide relevant environment information.
-  placeholder: |
-  Examples:
-  - Application version / commit
-  - Browser and version
-  - Operating system
-  - Android/iOS version
-  - Device model
-  - Development / Staging / Production
-  validations:
-  required: true
-
-* type: textarea
-  id: evidence
-  attributes:
-  label: Logs, Screenshots, or Recordings
-  description: |
-  Add any useful logs, screenshots, recordings, stack traces, or other evidence.
-
-  ```
-  Do not include passwords, access tokens, API keys, private keys, personal data, or other sensitive information.
-  ```
-
-  placeholder: Paste sanitized logs or attach supporting evidence.
-
-* type: textarea
-  id: regression
-  attributes:
-  label: Regression Information
-  description: If this worked previously, describe when it last worked or what may have changed.
-  placeholder: |
-  Example:
-  Worked correctly in v0.4.1 and started failing after v0.4.2.
-
-* type: textarea
-  id: impact
-  attributes:
-  label: Impact
-  description: Explain how this issue affects users, operations, or development.
-  placeholder: Describe the practical impact of this bug.
-
-* type: textarea
-  id: workaround
-  attributes:
-  label: Known Workaround
-  description: Describe any temporary workaround if one exists.
-  placeholder: N/A
-
-* type: textarea
-  id: additional-context
-  attributes:
-  label: Additional Context
-  description: Add any other information that may help investigate the issue.
-
-* type: checkboxes
-  id: verification
-  attributes:
-  label: Verification
-  options:
-  - label: I searched existing issues and did not find a duplicate.
-  required: true
-  - label: I have removed credentials, secrets, personal data, and other sensitive information from this report.
-  required: true
-  - label: This is not a security vulnerability requiring private disclosure.
-  required: true
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por reportar el problema. No publiques vulnerabilidades ni
+        credenciales; utiliza el canal privado definido en SECURITY.md.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Resumen
+      description: Explica el problema de forma clara y concreta.
+      placeholder: ¿Qué está fallando y a quién afecta?
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Entorno y versión
+      placeholder: Staging, commit, versión, navegador, OS o dispositivo.
+    validations:
+      required: true
+  - type: textarea
+    id: preconditions
+    attributes:
+      label: Precondiciones
+      placeholder: Estado necesario antes de reproducir el problema.
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Pasos para reproducir
+      placeholder: |
+        1. Abrir...
+        2. Seleccionar...
+        3. Observar...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Resultado esperado
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Resultado actual
+    validations:
+      required: true
+  - type: dropdown
+    id: reproducibility
+    attributes:
+      label: Frecuencia
+      options: [Siempre, Frecuente, Intermitente, Una sola vez]
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área afectada
+      options: [Backend, Frontend, Mobile, Infrastructure, QA, Product, Security, Unknown]
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impacto
+      description: Describe usuarios, operaciones o datos afectados.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidencia sanitizada
+      description: No incluyas secretos, tokens, datos personales ni información sensible.
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Criterios de aceptación
+      description: Incluye la regresión que debería proteger la corrección.
+    validations:
+      required: true
+  - type: checkboxes
+    id: verification
+    attributes:
+      label: Verificación
+      options:
+        - label: Busqué Issues existentes y no encontré un duplicado.
+          required: true
+        - label: Eliminé secretos y datos sensibles del reporte.
+          required: true
+        - label: Esto no es una vulnerabilidad que requiera reporte privado.
+          required: true

@@ -1,0 +1,54 @@
+name: Crear una tarea
+description: Trabajo técnico u operativo con resultado verificable.
+title: "[Task]: "
+labels: []
+type: Task
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objetivo
+      description: ¿Qué resultado debe conseguirse y por qué?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Alcance y fuera de alcance
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Criterios de aceptación
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validación y pruebas
+      description: Incluye smoke tests si el cambio es desplegable.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área
+      options: [Backend, Frontend, Mobile, Infrastructure, QA, Product, Security, Documentation]
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencias, riesgos y bloqueos
+  - type: checkboxes
+    id: ready
+    attributes:
+      label: Definition of Ready
+      options:
+        - label: El resultado es verificable.
+          required: true
+        - label: Las decisiones pendientes no impiden comenzar.
+          required: true
+        - label: No incluí secretos ni datos sensibles.
+          required: true

@@ -1,155 +1,80 @@
-name: Feature Request
-description: Suggest a new feature, improvement, or product capability.
+name: Proponer una funcionalidad
+description: Propón una capacidad o mejora explicando primero el problema.
 title: "[Feature]: "
 labels: []
 type: Feature
-
 body:
-
-* type: markdown
-  attributes:
-  value: |
-  Thank you for suggesting a feature or improvement.
-
-  ```
-  Please describe the problem or opportunity clearly before proposing a solution.
-  ```
-
-* type: textarea
-  id: problem
-  attributes:
-  label: Problem or Opportunity
-  description: Describe the problem, limitation, user need, or opportunity this feature addresses.
-  placeholder: |
-  What problem exists today?
-  Who is affected?
-  Why is it important?
-  validations:
-  required: true
-
-* type: textarea
-  id: proposed-solution
-  attributes:
-  label: Proposed Solution
-  description: Describe the functionality or behavior you would like to see.
-  placeholder: Explain how you think the feature should work.
-  validations:
-  required: true
-
-* type: textarea
-  id: user-value
-  attributes:
-  label: User or Business Value
-  description: Explain what value this feature would provide.
-  placeholder: |
-  Examples:
-  - Improves user experience
-  - Reduces operational work
-  - Enables a new business capability
-  - Improves reliability
-  - Increases security
-  validations:
-  required: true
-
-* type: dropdown
-  id: area
-  attributes:
-  label: Primary Area
-  description: Select the primary area affected by this feature.
-  options:
-  - Backend
-  - Frontend
-  - Mobile
-  - Infrastructure
-  - QA
-  - Product
-  - Security
-  - Multiple areas
-  - Unknown
-  validations:
-  required: true
-
-* type: dropdown
-  id: audience
-  attributes:
-  label: Primary Audience
-  description: Who would primarily benefit from this feature?
-  options:
-  - Customers
-  - Providers
-  - Businesses
-  - Administrators
-  - Internal team
-  - Developers
-  - Multiple audiences
-  - Other
-  validations:
-  required: true
-
-* type: textarea
-  id: use-cases
-  attributes:
-  label: Use Cases
-  description: Describe one or more practical scenarios where this feature would be used.
-  placeholder: |
-  Example:
-  1. A customer...
-  2. A provider...
-  3. A business owner...
-
-* type: textarea
-  id: alternatives
-  attributes:
-  label: Alternatives Considered
-  description: Describe any alternative solutions or workarounds you have considered.
-  placeholder: N/A
-
-* type: textarea
-  id: dependencies
-  attributes:
-  label: Dependencies or Related Features
-  description: Mention other systems, APIs, features, or work that this request may depend on.
-  placeholder: |
-  Examples:
-  - Authentication system
-  - Payments
-  - Maps
-  - Notifications
-  - Business profiles
-
-* type: textarea
-  id: risks
-  attributes:
-  label: Risks or Considerations
-  description: Mention any known technical, operational, security, legal, or product concerns.
-  placeholder: N/A
-
-* type: textarea
-  id: acceptance
-  attributes:
-  label: Suggested Acceptance Criteria
-  description: Describe what should be true for this feature to be considered complete.
-  placeholder: |
-  Example:
-  - User can...
-  - System validates...
-  - Errors are handled...
-  - Feature works on...
-
-* type: textarea
-  id: additional-context
-  attributes:
-  label: Additional Context
-  description: Add mockups, references, screenshots, examples, or any other useful information.
-
-* type: checkboxes
-  id: verification
-  attributes:
-  label: Verification
-  options:
-  - label: I searched existing issues and did not find an equivalent feature request.
-  required: true
-  - label: This request describes the problem or need, not only a preferred implementation.
-  required: true
-  - label: I have not included credentials, secrets, private user data, or other sensitive information.
-  required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema u oportunidad
+      description: ¿Quién está afectado, qué necesita y por qué importa?
+    validations:
+      required: true
+  - type: textarea
+    id: value
+    attributes:
+      label: Valor para usuarios o negocio
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Alcance propuesto
+    validations:
+      required: true
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Fuera de alcance
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Criterios de aceptación
+      placeholder: |
+        - El usuario puede...
+        - El sistema valida...
+        - Los errores se muestran...
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área principal
+      options: [Backend, Frontend, Mobile, Infrastructure, QA, Product, Security, Multiple areas]
+    validations:
+      required: true
+  - type: dropdown
+    id: audience
+    attributes:
+      label: Audiencia
+      options: [Customers, Providers, Businesses, Administrators, Internal team, Developers, Multiple audiences]
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternativas consideradas
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencias y bloqueos
+  - type: textarea
+    id: risks
+    attributes:
+      label: Riesgos y seguridad
+    validations:
+      required: true
+  - type: checkboxes
+    id: verification
+    attributes:
+      label: Verificación
+      options:
+        - label: Busqué propuestas equivalentes.
+          required: true
+        - label: Expliqué el problema, no solamente una implementación preferida.
+          required: true
+        - label: No incluí secretos ni datos sensibles.
+          required: true
