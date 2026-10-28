@@ -1,3 +1,8 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./readme_banner_oscuro.png">
+  <img alt="AEWhite Devs · Desarrollo · Infraestructura · Automatización" src="./readme_banner_claro.png">
+</picture>
+
 # AEWhite Devs
 
 AEWhite Devs is a software development organization focused on building scalable digital products, platforms, and services.
